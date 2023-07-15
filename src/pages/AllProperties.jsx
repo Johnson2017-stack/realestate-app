@@ -2,6 +2,7 @@ import React from 'react';
 import propertyList from '../propertyList';
 
 import Title from '../components/Title';
+import ListItem from '../components/ListItem';
 
 const AllProperties = () => {
   return (
@@ -9,10 +10,10 @@ const AllProperties = () => {
       <Title pageName="All Available Properties"/>
 
       {Object.entries(propertyList).map(([id, {address, image}]) => (
-         <li key={id}>
-               <p>{address}</p>
-               <img src={image} alt={`home ${id}`}></img>
-         </li>
+         <ListItem 
+            id={id}
+            PropertyAddress={address}
+            PropertyImage={image} />
       ))}
     </>
   )
