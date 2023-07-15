@@ -5,7 +5,7 @@ const ListItem = ({id, PropertyAddress, PropertyImage}) => {
   return (
       <>
         <div key={id}>
-               <Link to={`/all-properties/${id}`}>
+               <Link to={`/main/${id}`}>
                <p>{PropertyAddress}</p>
                </Link>
                <img src={PropertyImage} alt={`home ${id}`} style={{width: '300px'}}/>
